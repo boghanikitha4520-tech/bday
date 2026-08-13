@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀Birthday Quest 🎀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div id="background"></div>
+
+    <!-- Decorations -->
+    <div id="fishLayer"></div>
+    <div id="bubbleLayer"></div>
+    <div id="cloudLayer"></div>
+    <div id="petalLayer"></div>
+    <div id="heartLayer"></div>
+    <div id="sparkleLayer"></div>
+
+  
+
+    <!-- Main Container -->
+    <div id="game">
+
+    <div id="mainCard">
+
+        <!-- Welcome Heading -->
+<h1 id="title">
+    Helloww Vinuu!! 👀
+</h1>
+
+<p id="subtitle">
+    Look what I cooked... 🍳<br>
+    (No, not food,buddhu 🙄.)<br>
+    Stop staring and click the button alreadyy. 🤨
+</p>
+
+        <!-- Tiny Niki -->
+        <div id="tinyNiki">
+
+    <img
+        id="nikiCharacter"
+        src="New folder/assests/characters/niki_idle.png"
+        alt="Tiny Niki">
+
+</div>
+
+        <!-- Dialogue Box -->
+        <div id="dialogueBox">
+            <p id="dialogueText">
+    Ready? 👀<br><br>
+    I have something fun waiting for you. 🎁
+</p>
+        </div>
+
+        <!-- Start Button -->
+       <button id="startButton">
+    🎁 Open Your Surprise! 🎁
+</button>
+<!-- ===========================
+     BALLOON GAME
+=========================== -->
+
+<div id="balloonGame" style="display:none;">
+
+    <h2 id="gameTitle">🎈 Pop the Balloons</h2>
+
+    <p id="balloonCounter">
+🎈 Pop 10 balloons!
+<br>
+0 / 10
+</p>
+
+    <div id="balloonArea"></div>
+
+</div>
+<!-- ===========================
+     BUNNY GAME
+=========================== -->
+
+<div id="bunnyGame" style="display:none;">
+
+    <h2 id="bunnyTitle">
+        🐰 Find BunBun
+    </h2>
+
+    <p id="bunnySubtitle">
+
+         Niki lost BunBun... 😭<br><br>
+
+        Can you find him?
+
+    </p>
+    <p id="bunnyComment">
+    🤭 I wonder where BunBun went...
+</p>
+
+    <div id="bunnyArea"></div>
+
+</div>
+<!-- ===========================
+     HAIR BOW GAME
+=========================== -->
+
+<div id="hairGame" style="display:none;">
+
+    <h2 id="hairTitle">
+        🎀 Catch My Hair Bows
+    </h2>
+
+    <p id="hairSubtitle">
+
+        Noooo!! 😭<br><br>
+
+        My hair bows flew away!<br>
+
+        Catch ONLY the bows! 🎀
+
+    </p>
+
+    <p id="hairCounter">
+
+        🎀 Collected: 0 / 3
+
+    </p>
+
+    <p id="hairComment">
+
+        🤭 Ready...?
+
+    </p>
+
+    <div id="hairArea"></div>
+
+</div>
+        </div>
+
+</div>
+
+<!-- Achievement Popup -->
+    <div id="achievementPopup"></div>
+
+    <!-- Game Screen -->
+    <div id="gameContainer"></div>
+
+    <!-- Birthday Letter -->
+    <div id="letterContainer"></div>
+
+    <!-- Transition Screen -->
+     <!-- ===========================
+     REWARD POPUP
+=========================== -->
+
+<!-- ===========================
+     FUNNY POPUP
+=========================== -->
+
+<div id="funnyPopup" style="display:none;">
+
+    <h2 id="funnyTitle">🎉 LEVEL COMPLETE!</h2>
+    
+
+    <p id="funnyText">
+
+        AYOOO VINNU!! 😭<br><br>
+
+        Bro really woke up and chose balloon violence... 🎈💥<br><br>
+
+        Those poor balloons had families, bro. 💔😭<br><br>
+
+        Fineee... you earned this. 🙄🎁
+
+    </p>
+
+    <button id="funnyBtn">
+        Hehe 😭
+    </button>
+
+</div>
+<div id="loadingPopup" style="display:none;">
+
+    <h2 id="loadingTitle">
+        🤔 Checking...
+    </h2>
+
+    <p id="loadingText">
+
+        Please wait...
+
+    </p>
+
+</div>
+<div id="rewardPopup" style="display:none;">
+
+    <h2>🎉 Level Complete!</h2>
+
+    <p>You unlocked...</p>
+
+   <div id="rewardItems">
+
+    <div>💚 Green Outfit</div>
+    <div>💛 Yellow  Hair Bow</div>
+    <div>🤍 White Plushie</div>
+    <div>🎈 Balloons</div>
+
+</div>
+    <button id="continueBtn">
+        Continue ➜
+    </button>
+
+</div>
+<!-- ===========================
+     TINY NIKI TRANSITION
+=========================== -->
+
+<div id="nikiTransition" style="display:none;">
+
+    <img
+        id="transitionNiki"
+        src="New folder/assests/characters/niki_cheer.png"
+        alt="Tiny Niki">
+
+    <div id="transitionDialogue">
+
+        <h2>Hehehe... 🤭</h2>
+
+        <p>
+
+            Okayyyy... 😌<br><br>
+
+            I'll admit it...<br><br>
+
+            That was kinda impressive. 😭<br><br>
+
+            Don't let it get to your head though. 🙄<br><br>
+
+            Now... let's see if you can find my bunny. 🐰👀
+
+        </p>
+
+        <button id="level2Btn">
+            I fear no bunny. 🐰
+        </button>
+        </div>
+
+    </div>
+     <div id="dressTransition" style="display:none;">
+    
+     
+
+    <img
+    id="dressTransitionNiki"
+    src="New folder/assests/characters/niki_think.png"
+    alt="Tiny Niki">
+
+    <div id="dressTransitionDialogue">
+
+        <h2>Hmm... 🤔</h2>
+
+        <p>
+
+HEHEHE... 🤭<br><br>
+
+<span style="color:#ff5ca8;"><b>Mission Completeee!! 🎁🎉</b></span>
+
+<span style="color:#ff6fae;"><b>Sab kuch ready haiii!! 🥹💖</b></span>
+
+<span style="color:#777;">Bas... ek choti si dikkat hai. 👀</span>
+
+
+ <span style="color:#ff5ca8;font-size:28px;"><b> main... abhi tak ready hi nahi hui. 😭😂</b></span>
+
+<span style="color:#ff5ca8;font-size:28px;"><b> Aur birthday photos bina ready hue??
+Bilkul nahi. 😤📸<br><br>
+
+Chaloo... mera outfit choose karo!! 🥺💖</b></span>
+</p>
+
+        <button id="dressLevelBtn">
+         Let's get Niki birthday-ready!👗
+
+        </button>
+
+    </div>
+</div>
+    <!-- ===========================
+     DRESS GAME
+=========================== -->
+
+ <div id="dressGame" style="display:none;">
+
+<div id="dressLayout">
+
+    <div id="previewArea">
+    <img
+    id="dressNiki"
+    src="New folder/assests/characters/niki_happy.png"
+    alt="Niki"
+    class="dressPreview"
+    style="display:block;">
+    <div id="previewInfo">
+
+    <p id="dressComment"></p>
+ <!-- <button data-moved-reference="confirmDressBtn" style="display:none;">
+    ✅ Confirm Outfit
+</button> -->
+
+</div>
+    
+
+    </div>
+
+    <div id="dressContent">
+
+
+<p>
+
+Mujhe cute banana tumhari responsibility hai. 😤💖<br><br>
+
+Dhyaan se choose karna... 👀<br><br>
+
+Ek hi request hai... <br><br>
+
+You better choose my favourite colour's outfit. 😤💖
+
+</p>
+
+
+<div id="outfitChoices">
+
+ <div class="outfitCard">
+
+    <button id="greenBtn" class="dressBtn">
+        💚 Green Outfit
+    </button>
+
+</div>
+
+    <div class="outfitCard">
+
+    <button id="whiteBtn" class="dressBtn">
+        🤍 White Outfit
+    </button>
+
+</div>
+    <div class="outfitCard">
+
+    <button id="yellowBtn" class="dressBtn">
+        💛 Yellow Outfit
+    </button>
+
+</div>
+
+</div>
+
+
+<button id="confirmDressBtn" style="display:none;">
+    &#x2705; Confirm Outfit
+</button>
+
+</div>
+</div>
+</div>
+
+<div id="partyPrep" style="display:none;">
+
+    <h2>🎉 Birthday Preparation</h2>
+
+    <p>
+        Almost there... 🥹💖<br><br>
+
+        Birthday party ke liye kuch cheezein abhi bhi missing hain.<br><br>
+
+        <b>You better choose ALL. 😤</b>
+    </p>
+    <div id="partyItems">
+
+    <button id="plushieBtn" class="partyBtn">🧸 Plushie</button>
+
+    <button id="cakeBtn" class="partyBtn">🎂 Cake</button>
+
+    <button id="balloonBtn" class="partyBtn">🎈 Balloons</button>
+
+    <button id="nikiBtn" class="partyBtn">👧 Nikii</button>
+
+</div>
+
+<p id="partyComment"></p>
+
+<button id="partyContinueBtn" style="display:none;">
+    🎉 Continue
+</button>
+
+</div>
+<!-- ===========================
+     DECORATING TRANSITION
+=========================== -->
+
+<div id="decoratingScene" style="display:none;">
+
+    <h2>🎀 Decorating...</h2>
+
+    <p id="decoratingText">
+
+        Hehe... 🤭<br><br>
+
+        Give me a second...<br><br>
+
+        Let me decorate everything... 🌸<br><br>
+
+        ...and invite all the guests!! 🧸🎈🎂
+
+    </p>
+
+</div>
+
+
+
+
+<div id="celebrationScene" style="display:none;">
+
+    <h2 id="smileTitle">📸 Smileeeee!!</h2>
+
+    <p id="readyText">
+        Everyone ready...? 👀✨
+    </p>
+
+    <div id="countdown">
+        <span id="countNumber">3</span>
+    </div>
+    
+
+  <div id="celebrationPhoto" style="display:none;">
+
+    <img id="partyImage" src="" alt="Birthday Celebration">
+
+</div>
+
+    <p id="celebrationComment" style="display:none;">
+        <span class="celebrationAccent">🤭 Hehehe...</span><br><br>
+        <span class="celebrationAccentStrong">Perfect!!</span>
+    </p>
+
+    <button id="cakeSceneBtn" style="display:none;">
+        🎂 Let's Cut The Cake!
+    </button>
+
+</div>
+
+<div id="candleScene" style="display:none;">
+    <div id="cakeBackground"></div>
+
+    <h2>🎂 Time To Celebrate!</h2>
+
+    <p>
+        Everything is finally ready... 🥹💖<br><br>
+
+        Now there's only one thing left...<br><br>
+
+        Make a wish and blow the candle. 🕯️✨
+    </p>
+
+    <p id="cakeNote">Happy Birthday Vinuu! 💚</p>
+
+    <div id="cakeArea">
+
+        <div id="cakeEmoji">🎂🕯️</div>
+
+    </div>
+
+    <button id="blowBtn">
+        💨 Blow The Candle
+    </button>
+    <div id="wishPopup" style="display:none;">
+
+    <h2>🎂✨</h2>
+
+    <p>
+
+        Waittt... 🤭
+
+        <br><br>
+
+        Why so hurry? Don’t forget to make a wish!
+
+        <br><br>
+
+        You forgot the most important part...
+
+        <br><br>
+
+        Make a wish first! 🌠💚
+
+        <br><br>
+
+        Wishes don't count if you rush them. 🥺✨
+
+    </p>
+
+    <button id="wishDoneBtn">
+
+        ✨ I made my wish!
+
+    </button>
+    <p id="wipeMessage" style="display:none;">
+
+🎉 Oopsie... 🤭<br><br>
+
+Looks like I got a little too excited<br>
+and made a confetti mess... 🎊✨<br><br>
+
+Can you wipe it away?<br><br>
+
+There's a little surprise<br>
+hiding underneath... 💌
+
+</p>
+
+</div>
+</div>
+<!-- ===========================
+     GAME RATING
+=========================== -->
+
+<div id="ratingScreen" style="display:none;">
+
+    <h2>Okayyy... be honest now. 👀💛</h2>
+
+    <p>
+        How would you rate your birthday surprise? 🎀
+    </p>
+
+    <div id="ratingButtons">
+
+        <button class="ratingBtn" data-rating="1">💗</button>
+        <button class="ratingBtn" data-rating="2">💗</button>
+        <button class="ratingBtn" data-rating="3">💗</button>
+        <button class="ratingBtn" data-rating="4">💗</button>
+        <button class="ratingBtn" data-rating="5">💗</button>
+
+    </div>
+
+    <p id="ratingComment"></p>
+    <button id="ratingContinueBtn" style="display:none;">
+    Continue ➜
+</button>
+
+</div>
+
+
+<!-- ===========================
+     FINAL TRANSITION
+=========================== -->
+
+<div id="finalTransition" style="display:none;">
+
+    <h2>Okayyy... final one now. 👀💛</h2>
+
+    <p>
+        I saved something for you at the very end... 💌
+    </p>
+
+    <button id="finalBtn">
+        I'm ready 💛
+    </button>
+
+</div>
+    <div id="transitionScreen"></div>
+
+<div id="cameraFlash"></div>
+<div id="letterScene" style="display:none;">
+
+   <div id="envelope">
+
+    💌
+
+</div>
+
+<div id="letterCard" style="display:none;">
+    <div class="letterTape" id="tapeLeft"></div>
+    <div class="letterTape" id="tapeRight"></div>
+    <div class="corner topLeft">🌸</div>
+<div class="corner topRight">🎀</div>
+<div class="corner bottomLeft">⭐</div>
+<div class="corner bottomRight">🤍</div>
+<div id="letterBow">
+
+    🎀
+
+</div>
+    <div id="letterHeader">
+
+    <div class="letterStars">
+        ⭐ 🌸 🎀 🌸 ⭐
+    </div>
+
+    <h2 id="letterTitle">
+        For Vinuu... 🤍
+    </h2>
+
+    <p id="letterSubTitle">
+        A little birthday surprise made with lots of love ✨
+    </p>
+
+</div>
+<div id="letterDivider">
+
+    🌸 ⋆｡𖦹°⭒˚｡⋆ 🎀 ⋆｡𖦹°⭒˚｡⋆ 🌸
+
+</div>
+<p id="letterText" aria-live="polite"></p>
+    <div id="letterSign">
+
+    With all my love,
+
+    <br>
+
+    Nikii 🤍
+
+</div>
+</div>
+
+</div>
+
+
+</div>
+    <div id="customCursor" aria-hidden="true">
+        <svg viewBox="0 0 32 32" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <path fill="#bf4a80" d="M2 2h4v4h4v4h4v4h12v4h-8v4h4v4h-4v4h-4v-4h-4v-4H6v-4H2z"/>
+            <path fill="#ff9bc6" d="M6 6h4v4h4v4h4v4h8v4h-8v4h4v4h-4v-4h-4v-4H6z"/>
+        </svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
