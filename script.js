@@ -552,7 +552,7 @@ const dressComment = document.getElementById("dressComment");
 
 greenBtn.addEventListener("click", () => {
     selectedOutfit = "green";
-dressNiki.src = "New folder/assests/characters/niki_green.png";
+dressNiki.src = "niki_green.png";
 dressNiki.style.display = "block";
     dressComment.innerHTML =
     "💚 Ooooo... Green it is!!<br><br>Nature princess vibes. 🌿🤭";
@@ -562,7 +562,7 @@ dressNiki.style.display = "block";
 
 whiteBtn.addEventListener("click", () => {
 selectedOutfit = "white";
-dressNiki.src = "New folder/assests/characters/niki_white.png";
+dressNiki.src = "niki_white.png";
 dressNiki.style.display = "block";
     dressComment.innerHTML =
     "🤍 Awww... So Good!!<br><br>I kinda love this one. 🥹✨";
@@ -572,7 +572,7 @@ dressNiki.style.display = "block";
 
 yellowBtn.addEventListener("click", () => {
 selectedOutfit = "yellow";
- dressNiki.src = "New folder/assests/characters/niki_yellow.png";
+ dressNiki.src = "niki_yellow.png";
 dressNiki.style.display = "block";
     dressComment.innerHTML =
     "💛 Ouuuu!!<br><br>This one's CUTE TOOOO!! 😭💖";
@@ -834,17 +834,17 @@ function takePhoto() {
     },2800);
 
     if(selectedOutfit === "green"){
-    partyImage.src = "New folder/assests/characters/party_green.png";
+    partyImage.src = "party_green.png";
 
 }
 else if(selectedOutfit === "yellow"){
 
-    partyImage.src = "New folder/assests/characters/party_yellow.png";
+    partyImage.src = "party_yellow.png";
 
 }
 else{
 
-    partyImage.src = "New folder/assests/characters/party_white.png";
+    partyImage.src = "party_white.png";
 
 }
     setTimeout(() => {
