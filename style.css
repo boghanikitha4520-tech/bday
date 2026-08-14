@@ -3175,3 +3175,33 @@ body * {
         height: 64px !important;
     }
 }
+@media (max-width: 720px) {
+
+    #dressTransition {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 15px !important;
+        gap: 10px !important;
+    }
+
+    #dressTransitionNiki {
+        width: 300px !important;
+        max-width: 75vw !important;
+        max-height: 45vh !important;
+        height: auto !important;
+        margin: 0 auto 10px !important;
+    }
+
+    #dressTransitionDialogue {
+        width: 92vw !important;
+        max-width: 92vw !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    #dressTransitionDialogue p {
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+    }
+}
