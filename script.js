@@ -100,9 +100,11 @@ function createBalloons(){
 
         balloon.innerHTML = "🎈";
 
-        balloon.style.left = Math.random() * 500 + "px";
+        const areaWidth = balloonArea.clientWidth - 70;
+const areaHeight = balloonArea.clientHeight - 85;
 
-        balloon.style.top = Math.random() * 300 + "px";
+balloon.style.left = Math.random() * areaWidth + "px";
+balloon.style.top = Math.random() * areaHeight + "px";
 
         balloon.addEventListener("click", () => {
 
