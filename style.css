@@ -3103,3 +3103,35 @@ body * {
         font-size: 17px;
     }
 }
+@media (max-width: 720px) {
+
+    #nikiTransition {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        overflow-y: auto;
+        justify-content: center;
+    }
+
+    #transitionNiki {
+        width: 210px;
+        max-width: 70vw;
+    }
+
+    #transitionDialogue {
+        width: 90%;
+        max-width: 90%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #transitionDialogue h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #transitionDialogue p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
