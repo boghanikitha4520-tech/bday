@@ -3257,3 +3257,56 @@ body * {
         font-size: 15px !important;
     }
 }
+#cakeEmoji {
+    position: relative !important;
+    width: 180px !important;
+    height: 150px !important;
+    font-size: 100px !important;
+    line-height: 1 !important;
+    margin: 20px auto !important;
+}
+
+#cakeEmoji .cake {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+#cakeEmoji .candle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 45px;
+    z-index: 2;
+}
+
+@media (max-width: 720px) {
+    #cakeEmoji {
+        width: 170px !important;
+        height: 145px !important;
+        font-size: 90px !important;
+    }
+
+    #cakeEmoji .candle {
+        font-size: 40px;
+    }
+}
+#cakeEmoji {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    font-size: 100px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
+
+@media (max-width: 720px) {
+    #cakeEmoji {
+        font-size: 85px !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
+    }
+}
