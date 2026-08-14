@@ -3303,3 +3303,42 @@ body * {
     white-space: nowrap !important;
 }
 
+@media (max-width: 720px) {
+
+    #decoratingScene {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 25px 20px !important;
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+    }
+
+    #decoratingScene h2 {
+        display: block !important;
+        width: 100% !important;
+
+        font-size: 32px !important;
+        margin: 0 0 25px !important;
+
+        text-align: center !important;
+    }
+
+    #decoratingText {
+        display: block !important;
+        width: 100% !important;
+        max-width: 350px !important;
+
+        margin: 0 auto !important;
+
+        font-size: 18px !important;
+        line-height: 1.8 !important;
+
+        text-align: center !important;
+    }
+}
