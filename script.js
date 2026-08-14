@@ -315,17 +315,27 @@ function createBushes(){
 
         bush.innerHTML = "🌳";
 
-       const isMobile = window.innerWidth <= 720;
+if (window.innerWidth <= 720) {
 
-if (isMobile) {
-    const columns = 3;
-    const xGap = (bunnyArea.clientWidth - 65) / (columns - 1);
+    const positions = [
+        [10, 5], [calc(50), 5], [calc(90), 5],
+        [10, 85], [calc(50), 85], [calc(90), 85],
+        [10, 165], [calc(50), 165], [calc(90), 165],
+        [10, 245], [calc(50), 245], [calc(90), 245]
+    ];
 
-    bush.style.left = (i % columns) * xGap + "px";
-    bush.style.top = Math.floor(i / columns) * 95 + 15 + "px";
+    function calc(percent) {
+        return (bunnyArea.clientWidth * percent / 100) - 32;
+    }
+
+    bush.style.left = positions[i][0] + "px";
+    bush.style.top = positions[i][1] + "px";
+
 } else {
+
     bush.style.left = (i % 4) * 140 + 40 + "px";
     bush.style.top = Math.floor(i / 4) * 120 + 40 + "px";
+
 }
 
         bush.addEventListener("click", () => {

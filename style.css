@@ -3160,3 +3160,18 @@ body * {
         padding: 18px !important;
     }
 }
+@media (max-width: 720px) {
+
+    #bunnyArea {
+        height: 340px !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .bush {
+        font-size: 50px !important;
+        width: 64px !important;
+        height: 64px !important;
+    }
+}
