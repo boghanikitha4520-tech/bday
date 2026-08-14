@@ -315,9 +315,18 @@ function createBushes(){
 
         bush.innerHTML = "🌳";
 
-        bush.style.left = (i % 4) * 140 + 40 + "px";
+       const isMobile = window.innerWidth <= 720;
 
-        bush.style.top = Math.floor(i / 4) * 120 + 40 + "px";
+if (isMobile) {
+    const columns = 3;
+    const xGap = (bunnyArea.clientWidth - 65) / (columns - 1);
+
+    bush.style.left = (i % columns) * xGap + "px";
+    bush.style.top = Math.floor(i / columns) * 95 + 15 + "px";
+} else {
+    bush.style.left = (i % 4) * 140 + 40 + "px";
+    bush.style.top = Math.floor(i / 4) * 120 + 40 + "px";
+}
 
         bush.addEventListener("click", () => {
 

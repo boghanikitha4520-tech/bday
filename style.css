@@ -3135,3 +3135,28 @@ body * {
         line-height: 1.5;
     }
 }
+@media (max-width: 720px) {
+    #nikiTransition {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 20px 10px !important;
+        width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    #transitionNiki {
+        width: 190px !important;
+        max-width: 55vw !important;
+        flex-shrink: 0 !important;
+    }
+
+    #transitionDialogue {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        box-sizing: border-box !important;
+        padding: 18px !important;
+    }
+}
