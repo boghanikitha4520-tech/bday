@@ -3343,24 +3343,7 @@ body * {
 }
 @media (max-width: 720px) {
 
-    #decoratingScene {
-        position: fixed !important;
-        inset: 0 !important;
-        transform: none !important;
-
-        width: 100vw !important;
-        max-width: none !important;
-        height: 100vh !important;
-
-        padding: 20px !important;
-        box-sizing: border-box !important;
-
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
-
+    position: fixed !important
     #decoratingScene h2 {
         display: block !important;
         position: static !important;
